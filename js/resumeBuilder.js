@@ -15,7 +15,7 @@ var bio = {
 		"skype": "giridja",
 		"location" : "Kiev, Ukraine"
 	},
-	"skills" : ["awesomeness", "programming", "managing sales", "JS"],
+	"skills" : ["fluent English", "programming", "managing sales", "very fast learner"],
 	"welcomeMessage" : "Hi!",
 	"bioPic" : "images/fry.jpg"
 };
