@@ -21,20 +21,23 @@ var bio = {
 };
 
 var work = {
-	"companies" : [
+	"jobs" : [
 		{
-			"date" : "11/2013 up to this moment",
-			"company" : "Profirem.com.ua",
-			"position" : "Founder and co-owner. Responsible for Sales and Marketing"
+			"dates" : "11/2013 up to this moment",
+			"employer" : "Profirem.com.ua",
+			"title" : "Founder and co-owner. Responsible for Sales and Marketing",
+			"description" : "Repairs and Building Company",
+			"location" : "Kiev, Ukraine"
 		},
 		{
-			"date" : "11/2007 - 01/2014",
-			"company" : "Ukrainian Media Holding",
-			"subdates" : [
+			"dates" : "11/2007 - 01/2014",
+			"employer" : "Ukrainian Media Holding",
+			"location" : "Kiev, Ukraine",
+			"dates" : [
 			{
-				"subdate" : " 10/2011 - 01/2013"
-				"position" : "Sales Director (Advertising), Argumenty i Fakty",
-				"resposibilities" : {
+				"dates" : " 10/2011 - 01/2013"
+				"title" : "Sales Director (Advertising), Argumenty i Fakty",
+				"description" : {
 					"num1" : "sales plan distribution among sales specialists, control and fulfilment;",
 					"num2" : "projects development and presentation;",
 					"num3" : "sales to and meetings with clients (to help sales specialists);",
@@ -42,9 +45,9 @@ var work = {
 				}
 			},
 			{
-				"position" : "Deputy Director (Advertising), Argumenty i Fakty."
-				"subdate" : "09/2010 - 10/2011"
-				"resposibilities" : {
+				"title" : "Deputy Director (Advertising), Argumenty i Fakty."
+				"dates" : "09/2010 - 10/2011"
+				"description" : {
 					"num1" : "top agencies and clients account management;",
 					"num2" : "searching for the new clients and those who did not advertise before;",
 					"num3" : "convincing new clients, presentations and negotiations (especially to maintain pricing politics);",
@@ -52,10 +55,10 @@ var work = {
 				}
 			},
 			{
-				"position" : "Key Clients Relations Manager for 7 radio stations, Key Agencies Relationship Manager,
+				"title" : "Key Clients Relations Manager for 7 radio stations, Key Agencies Relationship Manager,
 Political Advertising Manager for 7 radio stations, (Advertising)"
-				"subdate" : "11/2007 - 10/2008"
-				"resposibilities" : {
+				"dates" : "11/2007 - 10/2008"
+				"description" : {
 					"num1" : "key clients servicing (presentations, negotiations, conclusion of contracts, legal assistance, consulting, marketing analysis, meeting organisation, planning, execution control);",
 					"num2" : "sales to clients of the key agencies (including direct sales);",
 					"num3" : "internal financial reporting; financial analysis and statistics;",
@@ -63,40 +66,41 @@ Political Advertising Manager for 7 radio stations, (Advertising)"
 				}
 			},
 			{
-				"position" : "Deputy Director, Europa Plus, (Advertising)"
-				"subdate" : "10/2006 - 10/2007"
-				"resposibilities" : {
+				"title" : "Deputy Director, Europa Plus, (Advertising)"
+				"dates" : "10/2006 - 10/2007"
+				"description" : {
 					"num1" : "sales managers work and sales plan accomplishment control and support;",
 					"num2" : "internal financial reporting; financial analysis and statistics;",
 					"num3" : "searching for new sales managers, testing, interviewing;",
 					"num4" : "key clients servicing, political advertising media planning, locating, broadcast control."
 				}
 			}
+			]
 		},
 		{
-			"date" : "01/2006 -  10/2006",
-			"company" : "Freelancer",
-			"position" : "Content-writer and Translator"
+			"dates" : "01/2006 -  10/2006",
+			"employer" : "Freelancer",
+			"title" : "Content-writer and Translator"
 		},
 		{
-			"date" : "05/2005 -  12/2005",
-			"company" : "Industrial Building Technologies",
-			"position" : "Sales Manager. Pre-engineered buildings"
+			"dates" : "05/2005 -  12/2005",
+			"employer" : "Industrial Building Technologies",
+			"title" : "Sales Manager. Pre-engineered buildings"
 		},
 		{
-			"date" : "09/2004 -  05/2005",
-			"company" : "InternetGates (Malta-USA)",
-			"position" : "Sales Manager. Internet Advertising"
+			"dates" : "09/2004 -  05/2005",
+			"employer" : "InternetGates (Malta-USA)",
+			"title" : "Sales Manager. Internet Advertising"
 		},
 		{
-			"date" : "01/2001 -  06/2004",
-			"company" : "different companies: Herz, Visual Bureau, Agroprodexport",
-			"position" : "Sales Manager or Client Relations Manager"
+			"dates" : "01/2001 -  06/2004",
+			"employer" : "different companies: Herz, Visual Bureau, Agroprodexport",
+			"title" : "Sales Manager or Client Relations Manager"
 		},
 		{
-			"date" : "08/1999 -  02/2001",
-			"company" : "Agroprodexport",
-			"position" : "Secretary-consultant"
+			"dates" : "08/1999 -  02/2001",
+			"employer" : "Agroprodexport",
+			"title" : "Secretary-consultant"
 		}
 		],
 	}
@@ -105,27 +109,41 @@ Political Advertising Manager for 7 radio stations, (Advertising)"
 var education = {
 	"onlineCourses" = [
 	{
-		"name" : "Coursera",
-		"specialization" : "Fundamentals of Coumputing",
-		"duration" : "for 25 weeks, finished in January 2015"
+		"school" : "Coursera",
+		"title" : "Fundamentals of Coumputing",
+		"dates" : "for 25 weeks, finished in January 2015"
+		"url" : "https://www.coursera.org/specialization/fundamentalscomputing2/37"
 	},
 	{
-		"name" : "Udacity",
-		"specialization" : "Front-End Web Developer (Nanodegree)",
-		"duration" : "2 months, finished in February 2015"
+		"school" : "Udacity",
+		"title" : "Front-End Web Developer (Nanodegree)",
+		"dates" : "in progress, started on th 11th of January, 2015",
+		"url" : "https://www.udacity.com/course/nd001"
 	}
 	],
 	"schools" = {
-		"name" : "International Christian University",
-		"city" : "Kiev, Ukraine",
+		"school" : "International Christian University",
+		"location" : "Kiev, Ukraine",
 		"degree" : "BA",
 		"major" : "Administrative Managment"
+		"dates" : "1999 - 2003"
 	},
 };
 
-var project = {
-
+var "projects" = {
+	"projects" : [
+		{
+			"title" : "profirem.com.ua",
+			"dates" : "since 11/2013",
+			"description" : "founding, development, online-marketing and technical support"
+		},
+		{
+			"title" : "fajela.com",
+			"dates" : "since 12/2014",
+			"description" : "in progress of idea development"
+		}
+	]
 };
 
-$("#main").append(work["currentPosition"]);
-$("#main").append(education.schoolName);
+//$("#main").append(work["currentPosition"]);
+//$("#main").append(education.schoolName);
