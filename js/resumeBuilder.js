@@ -20,18 +20,16 @@ var bio = {
 	"bioPic" : "images/fry.jpg"
 };
 
-$("#main").append(bio.name);
-$("#main").append(bio.role);
-$("#main").append(bio.contacts);
-$("#main").append(bio.skills);
-$("#main").append(bio.welcomeMessage);
-$("#main").append(bio.bioPic);
-
 var work = {
 	"companies" : [
 		{
-			"date" : "11/2007 - 01/2014"
-			"company" : "Ukrainian Media Holding"
+			"date" : "11/2013 up to this moment",
+			"company" : "Profirem.com.ua",
+			"position" : "Founder and co-owner. Responsible for Sales and Marketing"
+		},
+		{
+			"date" : "11/2007 - 01/2014",
+			"company" : "Ukrainian Media Holding",
 			"subdates" : [
 			{
 				"subdate" : " 10/2011 - 01/2013"
@@ -76,15 +74,32 @@ Political Advertising Manager for 7 radio stations, (Advertising)"
 			}
 		},
 		{
-			
+			"date" : "01/2006 -  10/2006",
+			"company" : "Freelancer",
+			"position" : "Content-writer and Translator"
+		},
+		{
+			"date" : "05/2005 -  12/2005",
+			"company" : "Industrial Building Technologies",
+			"position" : "Sales Manager. Pre-engineered buildings"
+		},
+		{
+			"date" : "09/2004 -  05/2005",
+			"company" : "InternetGates (Malta-USA)",
+			"position" : "Sales Manager. Internet Advertising"
+		},
+		{
+			"date" : "01/2001 -  06/2004",
+			"company" : "different companies: Herz, Visual Bureau, Agroprodexport",
+			"position" : "Sales Manager or Client Relations Manager"
+		},
+		{
+			"date" : "08/1999 -  02/2001",
+			"company" : "Agroprodexport",
+			"position" : "Secretary-consultant"
 		}
 		],
-	"currentPosition" : "self-employed",
-	"employer" : "business owner",
-	"yearsWorked" : "2014 up to this moment",
-	"city" : "Kiev"
 	}
-	
 };
 
 var education = {
