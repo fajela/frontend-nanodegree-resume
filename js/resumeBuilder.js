@@ -133,7 +133,11 @@ var projects = {
 		{
 			"title" : "profirem.com.ua",
 			"dates" : "since 11/2013",
-			"description" : "founding, development, online-marketing and technical support"
+			"description" : "founding, development, online-marketing and technical support",
+			"images" : [
+				"place for image url",
+				"place 2 for image url"
+			]
 		},
 		{
 			"title" : "fajela.com",
