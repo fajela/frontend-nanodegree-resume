@@ -35,7 +35,7 @@ var work = {
 			"location" : "Kiev, Ukraine",
 			"dates" : [
 			{
-				"dates" : " 10/2011 - 01/2013"
+				"dates" : " 10/2011 - 01/2013",
 				"title" : "Sales Director (Advertising), Argumenty i Fakty",
 				"description" : {
 					"num1" : "sales plan distribution among sales specialists, control and fulfilment;",
@@ -45,8 +45,8 @@ var work = {
 				}
 			},
 			{
-				"title" : "Deputy Director (Advertising), Argumenty i Fakty."
-				"dates" : "09/2010 - 10/2011"
+				"title" : "Deputy Director (Advertising), Argumenty i Fakty.",
+				"dates" : "09/2010 - 10/2011",
 				"description" : {
 					"num1" : "top agencies and clients account management;",
 					"num2" : "searching for the new clients and those who did not advertise before;",
@@ -55,9 +55,8 @@ var work = {
 				}
 			},
 			{
-				"title" : "Key Clients Relations Manager for 7 radio stations, Key Agencies Relationship Manager,
-Political Advertising Manager for 7 radio stations, (Advertising)"
-				"dates" : "11/2007 - 10/2008"
+				"title" : "Key Clients Relations Manager for 7 radio stations, Key Agencies Relationship Manager, Political Advertising Manager for 7 radio stations, (Advertising)",
+				"dates" : "11/2007 - 10/2008",
 				"description" : {
 					"num1" : "key clients servicing (presentations, negotiations, conclusion of contracts, legal assistance, consulting, marketing analysis, meeting organisation, planning, execution control);",
 					"num2" : "sales to clients of the key agencies (including direct sales);",
@@ -66,8 +65,8 @@ Political Advertising Manager for 7 radio stations, (Advertising)"
 				}
 			},
 			{
-				"title" : "Deputy Director, Europa Plus, (Advertising)"
-				"dates" : "10/2006 - 10/2007"
+				"title" : "Deputy Director, Europa Plus, (Advertising)",
+				"dates" : "10/2006 - 10/2007",
 				"description" : {
 					"num1" : "sales managers work and sales plan accomplishment control and support;",
 					"num2" : "internal financial reporting; financial analysis and statistics;",
@@ -102,16 +101,15 @@ Political Advertising Manager for 7 radio stations, (Advertising)"
 			"employer" : "Agroprodexport",
 			"title" : "Secretary-consultant"
 		}
-		],
-	}
+	],
 };
 
 var education = {
-	"onlineCourses" = [
+	"onlineCourses" : [
 	{
 		"school" : "Coursera",
 		"title" : "Fundamentals of Coumputing",
-		"dates" : "for 25 weeks, finished in January 2015"
+		"dates" : "for 25 weeks, finished in January 2015",
 		"url" : "https://www.coursera.org/specialization/fundamentalscomputing2/37"
 	},
 	{
@@ -121,16 +119,16 @@ var education = {
 		"url" : "https://www.udacity.com/course/nd001"
 	}
 	],
-	"schools" = {
+	"schools" : {
 		"school" : "International Christian University",
 		"location" : "Kiev, Ukraine",
 		"degree" : "BA",
-		"major" : "Administrative Managment"
+		"major" : "Administrative Managment",
 		"dates" : "1999 - 2003"
 	},
 };
 
-var "projects" = {
+var projects = {
 	"projects" : [
 		{
 			"title" : "profirem.com.ua",
