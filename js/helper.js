@@ -85,10 +85,23 @@ function logClicks(x,y) {
 }
 
 $(document).click(function(loc) {
-  // your code goes here!
+  var x = loc.pageX;
+  var y = loc.pageY;
+
+  logClicks(x,y);
 });
 
+function locationizer(work_obj) {
+    var locationsArray = [];
+    for (job in work_obj.jobs) {
+        var newLocation = work_obj.jobs[job].location;
+        locationsArray.push(newLocation);
+    }
+    return locationsArray;
+}
 
+// Did locationizer() work? This line will tell you!
+console.log(locationizer(work));
 
 /*
 This is the fun part. Here's where we generate the custom Google Map for the website.
