@@ -1,13 +1,6 @@
-
-var formattedName = HTMLheaderName.replace("%data%", "Olesia Korobka");
-var formattedRole = HTMLheaderRole.replace("%data%", "Project Manager");
-$("#header").prepend(formattedName);
-$("#header").append(formattedRole);
-
 var bio = {
 	"name" : "Olesia Korobka",
 	"role" : "Project Manager",
-	"age" : 32,
 	"contacts" : {
 		"e-mail" : "fajela@gmail.com",
 		"mobile" :  "+38-096-94-11-373",
@@ -15,9 +8,9 @@ var bio = {
 		"skype": "giridja",
 		"location" : "Kiev, Ukraine"
 	},
-	"skills" : ["fluent English", "programming", "managing sales", "very fast learner"],
+	"skills" : ["managing sales", "SEO", "Python", "JS"],
 	"welcomeMessage" : "Hi!",
-	"bioPic" : "images/fry.jpg"
+	"bioPic" : "images/olesia.jpg"
 };
 
 var work = {
@@ -33,7 +26,7 @@ var work = {
 			"dates" : "11/2007 - 01/2014",
 			"employer" : "Ukrainian Media Holding",
 			"location" : "Kiev, Ukraine",
-			"dates" : [
+			"subdates" : [
 			{
 				"dates" : " 10/2011 - 01/2013",
 				"title" : "Sales Director (Advertising), Argumenty i Fakty",
@@ -79,27 +72,32 @@ var work = {
 		{
 			"dates" : "01/2006 -  10/2006",
 			"employer" : "Freelancer",
-			"title" : "Content-writer and Translator"
+			"title" : "Content-writer and Translator",
+			"location" : "Kiev, Ukraine"
 		},
 		{
 			"dates" : "05/2005 -  12/2005",
 			"employer" : "Industrial Building Technologies",
-			"title" : "Sales Manager. Pre-engineered buildings"
+			"title" : "Sales Manager. Pre-engineered buildings",
+			"location" : "Kiev, Ukraine"
 		},
 		{
 			"dates" : "09/2004 -  05/2005",
 			"employer" : "InternetGates (Malta-USA)",
-			"title" : "Sales Manager. Internet Advertising"
+			"title" : "Sales Manager. Internet Advertising",
+			"location" : "Kiev, Ukraine"
 		},
 		{
 			"dates" : "01/2001 -  06/2004",
 			"employer" : "different companies: Herz, Visual Bureau, Agroprodexport",
-			"title" : "Sales Manager or Client Relations Manager"
+			"title" : "Sales Manager or Client Relations Manager",
+			"location" : "Ukraine"
 		},
 		{
 			"dates" : "08/1999 -  02/2001",
 			"employer" : "Agroprodexport",
-			"title" : "Secretary-consultant"
+			"title" : "Secretary-consultant",
+			"location" : "Kiev, Ukraine"
 		}
 	],
 };
@@ -135,17 +133,136 @@ var projects = {
 			"dates" : "since 11/2013",
 			"description" : "founding, development, online-marketing and technical support",
 			"images" : [
-				"place for image url",
-				"place 2 for image url"
+				"images/profirem_nadpis.png",
+				"images/23962028_ml.jpg"
 			]
 		},
 		{
 			"title" : "fajela.com",
 			"dates" : "since 12/2014",
-			"description" : "in progress of idea development"
+			"description" : "in progress of idea development",
+			"images" : [
+				"images/processing_sketch.png",
+				"images/processing_sketch3_smile.png"
+			]
 		}
 	]
 };
 
-//$("#main").append(work["currentPosition"]);
-//$("#main").append(education.schoolName);
+bio.display = function() {
+	var formattedName = HTMLheaderName.replace("%data%", bio.name);
+	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+	$("#header").prepend(formattedRole);
+	$("#header").prepend(formattedName);
+	
+	var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+	$("#header").append(formattedBioPic);
+	var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
+	$("#header").append(formattedWelcomeMsg);
+
+	for (contact in bio.contacts) {
+		var formattedContact = HTMLcontactGeneric.replace("%data%", bio.contacts[contact]);
+		formattedContact = formattedContact.replace("%contact%", contact);
+		$("#topContacts").append(formattedContact);
+		$("#footerContacts").append(formattedContact);
+	}
+
+	if(bio.skills.length > 0) {
+		$("#header").append(HTMLskillsStart);
+	}
+
+	for (skill in bio.skills) {
+		var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
+		$("#skills").append(formattedSkill);
+	}
+}
+
+bio.display();
+
+function displayWork() {
+	for (job in work.jobs) {
+		//create new div for work experience
+		$("#workExperience").append(HTMLworkStart);
+		//concat employer and title
+		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+		var formattedEmployerTitle = formattedEmployer + formattedTitle;
+		$(".work-entry:last").append(formattedEmployerTitle);
+		var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+		$(".work-entry:last").append(formattedDates);
+		var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+		$(".work-entry:last").append(formattedLocation);
+		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+		$(".work-entry:last").append(formattedDescription);
+	}
+}
+
+displayWork();
+
+projects.display = function() {
+	for (project in projects.projects) {
+		$("#projects").append(HTMLprojectStart);
+		var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+		$(".project-entry:last").append(formattedProjectTitle);
+		var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+		$(".project-entry:last").append(formattedProjectDates);
+		var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+		$(".project-entry:last").append(formattedProjectDescription);
+		if (projects.projects[project].images.length > 0) {
+			for (image in projects.projects[project].images) {
+				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+				$(".project-entry:last").append(formattedImage);
+			}
+		}
+	}
+};
+
+projects.display();
+
+education.display = function() {
+	$("#education").append(HTMLschoolStart);
+	var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools.school);
+	var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools.degree);
+	var formattedSchoolDegree = formattedSchoolName + formattedDegree;
+	$(".education-entry:last").append(formattedSchoolName);
+	var formattedDates = HTMLschoolDates.replace("%data%", education.schools.dates);
+	$(".education-entry:last").append(formattedDates);
+	var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools.location);
+	$(".education-entry:last").append(formattedLocation);
+	var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools.major);
+	$(".education-entry:last").append(formattedMajor);
+
+	$("#education").append(HTMLonlineClasses);
+	
+	for (course in education.onlineCourses){
+		$("#education").append(HTMLschoolStart);
+		var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
+		var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
+		var formattedOnlineSchool = formattedOnlineTitle + formattedSchool;
+		$(".education-entry:last").append(formattedOnlineSchool);
+		var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
+		$(".education-entry:last").append(formattedOnlineDates);
+		var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
+		$(".education-entry:last").append(formattedOnlineURL);
+	}
+	
+}
+
+education.display();
+
+$("#mapDiv").append(googleMap);
+/*
+This function doesn't work.
+function inName(name) {
+  name = name.trim().split(" ");
+  console.log(name);
+  name[1] = name[1].toUpperCase();
+  name[0] = name[0].slice(0,1).toUpperCase();
+  name[0].slice(1).toLowerCase();
+  
+  return name[0] + " " + name[1];
+}
+
+$('#main').append(internationalizeButton);
+*/
+

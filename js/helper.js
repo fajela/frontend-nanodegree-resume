@@ -62,6 +62,7 @@ var googleMap = '<div id="map"></div>';
 /*
 The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
 */
+
 $(document).ready(function() {
   $('button').click(function() {
     var iName = inName() || function(){};
@@ -71,7 +72,7 @@ $(document).ready(function() {
 
 /*
 The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
-*/
+
 clickLocations = [];
 
 function logClicks(x,y) {
@@ -102,6 +103,7 @@ function locationizer(work_obj) {
 
 // Did locationizer() work? This line will tell you!
 console.log(locationizer(work));
+*/
 
 /*
 This is the fun part. Here's where we generate the custom Google Map for the website.
@@ -183,7 +185,7 @@ function initializeMap() {
 
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
-      // your code goes here!
+      infoWindow.open(map,marker);
     });
 
     // this is where the pin actually gets added to the map.
@@ -246,11 +248,11 @@ Uncomment the code below when you're ready to implement a Google Map!
 */
 
 // Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-//window.addEventListener('resize', function(e) {
+window.addEventListener('resize', function(e) {
   // Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+  map.fitBounds(mapBounds);
+});
