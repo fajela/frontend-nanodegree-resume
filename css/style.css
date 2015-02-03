@@ -13,9 +13,14 @@
   padding-right: 5%;
 }
 
+.sub {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
 h1 {
   font-size: 40px;
-  color: #F5A623;
+  color: #446EF2;
   line-height: 48px;
   display: inline;
 }
@@ -23,7 +28,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999999;
+  color: #446EF2;
   line-height: 29px;
   padding: 10px;
 }
@@ -31,14 +36,14 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000000;
+  color: #141C36;
   line-height: 22px;
 }
 
 h4 {
   font-weight: bold;
   font-size: 14px;
-  color: #4A4A4A;
+  color: #446EF2;
   line-height: 17px;
 }
 
@@ -52,7 +57,7 @@ h2, h3, h4, h5 {
 .date-text {
   font-style: italic;
   font-size: 14px;
-  color: #999999;
+  color: #446EF2;
   line-height: 16px;
   float: left;
 }
@@ -60,7 +65,7 @@ h2, h3, h4, h5 {
 .location-text {
   font-style: italic;
   font-size: 14px;
-  color: #999999;
+  color: #446EF2;
   line-height: 16px;
   float: right;
 
@@ -73,7 +78,7 @@ p {
 }
 
 a {
-  color: #1199C3;
+  color: #030712;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -87,16 +92,16 @@ a {
 }
 
 #skillsH3 {
-  color: #F5AE23;
+  color: #FCD97A;
   display: none;
 }
 
 .orange {
-  background-color: #F5AE23;
+  background-color: #FCD97A;
 }
 
 .orange-text {
-  color: #F5AE23;
+  color: #FCD97A;
 }
 
 .white-text {
@@ -116,7 +121,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #141C36;
 }
 
 .flex-box {

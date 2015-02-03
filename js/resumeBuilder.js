@@ -1,5 +1,5 @@
 var bio = {
-	"name" : "Olesia Korobka",
+	"name" : "Olesia KOROBKA",
 	"role" : "Project Manager",
 	"contacts" : {
 		"e-mail" : "fajela@gmail.com",
@@ -9,7 +9,7 @@ var bio = {
 		"location" : "Kiev, Ukraine"
 	},
 	"skills" : ["managing sales", "SEO", "Python", "JS"],
-	"welcomeMessage" : "Hi!",
+	"welcomeMessage" : "This is my resume",
 	"bioPic" : "images/olesia.jpg"
 };
 
@@ -18,54 +18,35 @@ var work = {
 		{
 			"dates" : "11/2013 up to this moment",
 			"employer" : "Profirem.com.ua",
-			"title" : "Founder and co-owner. Responsible for Sales and Marketing",
+			"title" : "Co-Founder. Responsible for Sales and Marketing",
 			"description" : "Repairs and Building Company",
 			"location" : "Kiev, Ukraine"
 		},
 		{
 			"dates" : "11/2007 - 01/2014",
 			"employer" : "Ukrainian Media Holding",
+			"title" : "Sales Department",
 			"location" : "Kiev, Ukraine",
-			"subdates" : [
+			"bigdescription" : [
 			{
 				"dates" : " 10/2011 - 01/2013",
-				"title" : "Sales Director (Advertising), Argumenty i Fakty",
-				"description" : {
-					"num1" : "sales plan distribution among sales specialists, control and fulfilment;",
-					"num2" : "projects development and presentation;",
-					"num3" : "sales to and meetings with clients (to help sales specialists);",
-					"num4" : "sales department coordination."
-				}
+				"title" : "Sales Director (Advertising), newspaper Argumenty i Fakty",
+				"description" : "<br>- Fulfilled sales plans during the company restructurisation,<br>- managed to keep key sales specialists without additional expenses,<br>- comforted and supported all the changes in the company during the change of its ownership,<br>- developed new projects and presentations,<br>- sales to and meetings with clients (to help sales specialists and comfort clients during the period of restructurisation)."
 			},
 			{
-				"title" : "Deputy Director (Advertising), Argumenty i Fakty.",
+				"title" : "Deputy Director (Advertising), newspaper Argumenty i Fakty.",
 				"dates" : "09/2010 - 10/2011",
-				"description" : {
-					"num1" : "top agencies and clients account management;",
-					"num2" : "searching for the new clients and those who did not advertise before;",
-					"num3" : "convincing new clients, presentations and negotiations (especially to maintain pricing politics);",
-					"num4" : "relationship with present clients and agencies."
-				}
+				"description" : "<br>- top agencies and clients account management,<br>- searching for the new clients and those who did not advertise before,<br>- convincing new clients, presentations and negotiations (especially to maintain pricing politics),<br>- relationship with present clients and agencies."
 			},
 			{
 				"title" : "Key Clients Relations Manager for 7 radio stations, Key Agencies Relationship Manager, Political Advertising Manager for 7 radio stations, (Advertising)",
 				"dates" : "11/2007 - 10/2008",
-				"description" : {
-					"num1" : "key clients servicing (presentations, negotiations, conclusion of contracts, legal assistance, consulting, marketing analysis, meeting organisation, planning, execution control);",
-					"num2" : "sales to clients of the key agencies (including direct sales);",
-					"num3" : "internal financial reporting; financial analysis and statistics;",
-					"num4" : "political advertising media planning, locating, broadcast control."
-				}
+				"description" : "<br>- key clients servicing (presentations, negotiations, conclusion of contracts, legal assistance, consulting, marketing analysis, meeting organisation, planning, execution control),<br>- sales to clients of the key agencies (including direct sales),<br>- internal financial reporting; financial analysis and statistics,<br>- political advertising media planning, locating, broadcast control."
 			},
 			{
 				"title" : "Deputy Director, Europa Plus, (Advertising)",
 				"dates" : "10/2006 - 10/2007",
-				"description" : {
-					"num1" : "sales managers work and sales plan accomplishment control and support;",
-					"num2" : "internal financial reporting; financial analysis and statistics;",
-					"num3" : "searching for new sales managers, testing, interviewing;",
-					"num4" : "key clients servicing, political advertising media planning, locating, broadcast control."
-				}
+				"description" : "<br>- sales managers work and sales plan accomplishment control and support,<br>- internal financial reporting; financial analysis and statistics,<br>- searching for new sales managers, testing, interviewing,<br>- key clients servicing, political advertising media planning, locating, broadcast control."
 			}
 			]
 		},
@@ -192,8 +173,25 @@ function displayWork() {
 		$(".work-entry:last").append(formattedDates);
 		var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
 		$(".work-entry:last").append(formattedLocation);
-		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-		$(".work-entry:last").append(formattedDescription);
+		if (typeof work.jobs[job].description === "undefined") {
+			var formattedDescription = HTMLworkDescription.replace("%data%", "");
+			$(".work-entry:last").append(formattedDescription);
+		}else
+		{
+			var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+			$(".work-entry:last").append(formattedDescription);
+		}
+
+		if (typeof work.jobs[job].bigdescription != "undefined") {
+			for (subjob in work.jobs[job].bigdescription) {
+				var formattedBigTitle = HTMLworkBigTitle.replace("%data%", work.jobs[job].bigdescription[subjob].title);
+		    	$(".work-entry:last").append(formattedBigTitle);
+				var formattedBigDates = HTMLworkBigDates.replace("%data%", work.jobs[job].bigdescription[subjob].dates);
+				$(".work-entry:last").append(formattedBigDates);
+				var formattedBigDescription = HTMLworkBigDescription.replace("%data%", work.jobs[job].bigdescription[subjob].description);
+				$(".work-entry:last").append(formattedBigDescription);
+			}
+		}
 	}
 }
 
@@ -251,18 +249,3 @@ education.display = function() {
 education.display();
 
 $("#mapDiv").append(googleMap);
-/*
-This function doesn't work.
-function inName(name) {
-  name = name.trim().split(" ");
-  console.log(name);
-  name[1] = name[1].toUpperCase();
-  name[0] = name[0].slice(0,1).toUpperCase();
-  name[0].slice(1).toLowerCase();
-  
-  return name[0] + " " + name[1];
-}
-
-$('#main').append(internationalizeButton);
-*/
-

@@ -1,14 +1,4 @@
 /*
-
-This file contains all of the code running in the background that makes resumeBuilder.js possible. We call these helper functions because they support your code in this course.
-
-Don't worry, you'll learn what's going on in this file throughout the course. You won't need to make any changes to it until you start experimenting with inserting a Google Map in Problem Set 3.
-
-Cameron Pittman
-*/
-
-
-/*
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
@@ -35,6 +25,9 @@ var HTMLworkTitle = ' - %data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
+var HTMLworkBigTitle = '<a class="sub" href="#">%data%</a>';
+var HTMLworkBigDates = '<div class="sub date-text">%data%</div>';
+var HTMLworkBigDescription = '<p class="sub"><br>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
@@ -70,8 +63,8 @@ $(document).ready(function() {
   });
 });
 
-/*
-The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
+
+//The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
 
 clickLocations = [];
 
@@ -102,8 +95,8 @@ function locationizer(work_obj) {
 }
 
 // Did locationizer() work? This line will tell you!
-console.log(locationizer(work));
-*/
+//console.log(locationizer(work));
+
 
 /*
 This is the fun part. Here's where we generate the custom Google Map for the website.
