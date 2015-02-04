@@ -87,7 +87,7 @@ var education = {
 	"onlineCourses" : [
 	{
 		"school" : "Coursera",
-		"title" : "Fundamentals of Coumputing",
+		"title" : "Fundamentals of Computing",
 		"dates" : "for 25 weeks, finished in January 2015",
 		"url" : "https://www.coursera.org/specialization/fundamentalscomputing2/37"
 	},
@@ -102,7 +102,7 @@ var education = {
 		"school" : "International Christian University",
 		"location" : "Kiev, Ukraine",
 		"degree" : "BA",
-		"major" : "Administrative Managment",
+		"major" : "Administrative Management",
 		"dates" : "1999 - 2003"
 	},
 };
